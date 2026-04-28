@@ -1,0 +1,1722 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Peeyash Babering Salon | Luxury Barbering Salon</title>
+    <meta
+      name="description"
+      content="The Peeyash Babering Salon offers luxury barbering, precision cuts, hot towel shaves, and a refined grooming experience in a vintage-modern setting."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Open+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --charcoal: #121212;
+        --charcoal-soft: #1b1b1b;
+        --charcoal-2: #202020;
+        --gold: #c5a059;
+        --gold-bright: #d8b16a;
+        --brown: #4f3422;
+        --brown-soft: #76533a;
+        --cream: #efe6d7;
+        --text: #f7f2ea;
+        --muted: #c5b9a6;
+        --line: rgba(197, 160, 89, 0.18);
+        --glass: rgba(18, 18, 18, 0.68);
+        --shadow-xl: 0 30px 80px rgba(0, 0, 0, 0.45);
+        --shadow-lg: 0 18px 50px rgba(0, 0, 0, 0.35);
+        --radius-xl: 30px;
+        --radius-lg: 22px;
+        --radius-md: 16px;
+        --container: 1240px;
+        --transition: 0.35s ease;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Open Sans", sans-serif;
+        background:
+          radial-gradient(
+            circle at top left,
+            rgba(197, 160, 89, 0.1),
+            transparent 30%
+          ),
+          radial-gradient(
+            circle at 90% 20%,
+            rgba(118, 83, 58, 0.15),
+            transparent 28%
+          ),
+          linear-gradient(
+            180deg,
+            #090909 0%,
+            #121212 32%,
+            #171310 68%,
+            #0e0e0e 100%
+          );
+        color: var(--text);
+        line-height: 1.7;
+        overflow-x: hidden;
+        position: relative;
+      }
+
+      body::before {
+        content: "THE Peeyash Babering Salon";
+        position: fixed;
+        left: -110px;
+        top: 40%;
+        transform: rotate(-90deg);
+        letter-spacing: 0.55rem;
+        font-size: 0.8rem;
+        font-weight: 700;
+        color: rgba(197, 160, 89, 0.16);
+        z-index: 1;
+        pointer-events: none;
+      }
+
+      body::after {
+        content: "HG";
+        position: fixed;
+        right: 2.5rem;
+        bottom: 1.5rem;
+        font-family: "Arvo", serif;
+        font-size: clamp(5rem, 12vw, 10rem);
+        color: rgba(197, 160, 89, 0.05);
+        z-index: 0;
+        pointer-events: none;
+      }
+
+      img,
+      video {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      button,
+      input,
+      textarea,
+      select {
+        font: inherit;
+      }
+
+      .container {
+        width: min(calc(100% - 2rem), var(--container));
+        margin: 0 auto;
+        position: relative;
+        z-index: 2;
+      }
+
+      .section {
+        padding: 7rem 0;
+        position: relative;
+      }
+
+      .section-header {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        gap: 0.9rem;
+        align-items: stretch;
+        margin-bottom: 2.8rem;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.65rem;
+        color: var(--gold);
+        text-transform: uppercase;
+        font-size: 0.78rem;
+        letter-spacing: 0.22rem;
+        margin-bottom: 1rem;
+      }
+
+      .eyebrow::before {
+        content: "";
+        width: 42px;
+        height: 1px;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          var(--gold),
+          transparent
+        );
+      }
+
+      h1,
+      h2,
+      h3,
+      h4 {
+        font-family: "Arvo", serif;
+        line-height: 1.12;
+      }
+
+      h1 {
+        font-size: clamp(3.2rem, 7vw, 6.1rem);
+        letter-spacing: -0.04em;
+        max-width: 11ch;
+      }
+
+      h2 {
+        font-size: clamp(2rem, 4.4vw, 3.5rem);
+        max-width: 11ch;
+      }
+
+      p.section-copy,
+      .lead,
+      .section-header p {
+        color: var(--muted);
+        font-size: 1.04rem;
+      }
+
+      .section-intro-card {
+        align-self: stretch;
+        min-height: 100%;
+        padding: 1.4rem 1.5rem;
+        border-radius: 24px;
+        background:
+          linear-gradient(
+            135deg,
+            rgba(197, 160, 89, 0.12),
+            rgba(197, 160, 89, 0.025)
+          ),
+          rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(197, 160, 89, 0.16);
+        box-shadow: var(--shadow-lg);
+        display: grid;
+        gap: 0.9rem;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .section-intro-card::before {
+        content: "Refined Since 2014";
+        position: absolute;
+        right: 1.2rem;
+        top: 1rem;
+        color: rgba(197, 160, 89, 0.2);
+        font-size: 0.72rem;
+        text-transform: uppercase;
+        letter-spacing: 0.18rem;
+      }
+
+      .section-intro-card .intro-metrics {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+      }
+
+      .section-intro-card .intro-note {
+        padding: 0.95rem 1rem;
+        border-radius: 16px;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(197, 160, 89, 0.08);
+        color: var(--cream);
+        font-size: 0.9rem;
+      }
+
+      .section-intro-card .intro-note strong {
+        color: var(--gold-bright);
+      }
+
+      .section-intro-card .intro-metrics div {
+        padding: 0.85rem 0.95rem;
+        border-radius: 16px;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(197, 160, 89, 0.08);
+      }
+
+      .section-intro-card .intro-metrics strong {
+        display: block;
+        color: var(--gold-bright);
+        font-family: "Arvo", serif;
+        font-size: 1.2rem;
+        margin-bottom: 0.2rem;
+      }
+
+      .section-intro-card .intro-metrics span {
+        color: var(--muted);
+        font-size: 0.84rem;
+      }
+
+      .whatsapp-float {
+        position: fixed;
+        right: 1.1rem;
+        bottom: 1.2rem;
+        z-index: 1200;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.9rem 1.15rem;
+        border-radius: 999px;
+        background: linear-gradient(135deg, #25d366, #128c7e);
+        color: #ffffff;
+        font-weight: 700;
+        box-shadow: 0 14px 34px rgba(0, 0, 0, 0.35);
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        transition:
+          transform var(--transition),
+          box-shadow var(--transition);
+      }
+
+      .whatsapp-float:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 18px 40px rgba(0, 0, 0, 0.42);
+      }
+
+      .whatsapp-icon {
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        background: rgba(255, 255, 255, 0.14);
+        font-size: 1.1rem;
+        flex-shrink: 0;
+      }
+
+      .site-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        padding: 1rem 0;
+        transition: var(--transition);
+      }
+
+      .site-header.scrolled {
+        background: rgba(9, 9, 9, 0.82);
+        backdrop-filter: blur(18px);
+        border-bottom: 1px solid rgba(197, 160, 89, 0.14);
+      }
+
+      .nav-shell {
+        width: min(calc(100% - 2rem), 1320px);
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        padding: 1rem 1.3rem;
+        background:
+          linear-gradient(
+            135deg,
+            rgba(197, 160, 89, 0.16),
+            rgba(79, 52, 34, 0.12)
+          ),
+          linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.04),
+            rgba(255, 255, 255, 0)
+          );
+        border: 1px solid rgba(197, 160, 89, 0.22);
+        border-radius: 999px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.22);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .nav-shell::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          radial-gradient(
+            circle at 20% 50%,
+            rgba(216, 177, 106, 0.18),
+            transparent 22%
+          ),
+          linear-gradient(
+            120deg,
+            transparent 0%,
+            rgba(255, 255, 255, 0.03) 45%,
+            transparent 100%
+          );
+        pointer-events: none;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 0.95rem;
+        position: relative;
+        z-index: 1;
+      }
+
+      .brand-mark {
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        color: var(--gold);
+        border: 1px solid rgba(197, 160, 89, 0.35);
+        background: radial-gradient(
+          circle at 30% 30%,
+          rgba(197, 160, 89, 0.22),
+          rgba(18, 18, 18, 0.75)
+        );
+        font-family: "Arvo", serif;
+        font-weight: 700;
+      }
+
+      .brand-text span {
+        display: block;
+      }
+
+      .brand-title {
+        font-family: "Arvo", serif;
+        letter-spacing: 0.05rem;
+        font-size: 1rem;
+      }
+
+      .brand-subtitle {
+        font-size: 0.73rem;
+        letter-spacing: 0.24rem;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        list-style: none;
+        position: relative;
+        z-index: 1;
+      }
+
+      .nav-links a {
+        color: #f6f0e6;
+        font-size: 0.94rem;
+        transition: var(--transition);
+      }
+
+      .nav-links a:hover {
+        color: var(--gold-bright);
+      }
+
+      .nav-actions {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+        position: relative;
+        z-index: 1;
+      }
+
+      .btn,
+      .btn-ghost {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.7rem;
+        border-radius: 999px;
+        padding: 0.92rem 1.35rem;
+        font-weight: 700;
+        transition:
+          transform var(--transition),
+          background var(--transition),
+          border-color var(--transition),
+          color var(--transition);
+        cursor: pointer;
+      }
+
+      .btn {
+        background: linear-gradient(
+          135deg,
+          var(--gold-bright),
+          var(--gold),
+          #9a7841
+        );
+        color: #140f0a;
+        border: 1px solid rgba(255, 232, 189, 0.2);
+        box-shadow: 0 10px 30px rgba(197, 160, 89, 0.26);
+      }
+
+      .btn:hover,
+      .btn:focus-visible {
+        transform: translateY(-2px);
+      }
+
+      .btn-ghost {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(197, 160, 89, 0.18);
+        color: var(--text);
+      }
+
+      .btn-ghost:hover,
+      .btn-ghost:focus-visible {
+        border-color: rgba(197, 160, 89, 0.45);
+        color: var(--gold-bright);
+      }
+
+      .mobile-toggle {
+        display: none;
+        background: transparent;
+        border: none;
+        color: var(--text);
+        font-size: 1.6rem;
+        cursor: pointer;
+        position: relative;
+        z-index: 2;
+      }
+
+      .social-rail {
+        position: fixed;
+        right: 1.1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        z-index: 50;
+      }
+
+      .social-rail a {
+        width: 46px;
+        height: 46px;
+        display: grid;
+        place-items: center;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(197, 160, 89, 0.14);
+        color: var(--gold);
+        backdrop-filter: blur(10px);
+        transition: var(--transition);
+      }
+
+      .social-rail a:hover {
+        transform: translateY(-2px);
+        border-color: rgba(197, 160, 89, 0.45);
+        color: var(--gold-bright);
+      }
+
+      .hero {
+        min-height: 100vh;
+        position: relative;
+        display: flex;
+        align-items: end;
+        padding: 8.5rem 0 4rem;
+        overflow: hidden;
+      }
+
+      .hero-video-wrap,
+      .hero-overlay,
+      .hero-noise {
+        position: absolute;
+        inset: 0;
+      }
+
+      .hero-video-wrap video {
+        height: 100%;
+        object-fit: cover;
+        filter: saturate(0.75) brightness(0.45) contrast(1.04);
+      }
+
+      .hero-overlay {
+        background:
+          linear-gradient(
+            90deg,
+            rgba(8, 8, 8, 0.88) 0%,
+            rgba(8, 8, 8, 0.48) 42%,
+            rgba(8, 8, 8, 0.74) 100%
+          ),
+          linear-gradient(
+            180deg,
+            rgba(12, 12, 12, 0.1) 0%,
+            rgba(12, 12, 12, 0.55) 75%,
+            rgba(12, 12, 12, 0.94) 100%
+          );
+      }
+
+      .hero-noise {
+        opacity: 0.15;
+        mix-blend-mode: soft-light;
+        background-image:
+          linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+        background-size:
+          4px 4px,
+          4px 4px;
+        pointer-events: none;
+      }
+
+      .hero-grid {
+        position: relative;
+        z-index: 2;
+        display: grid;
+        grid-template-columns: 1.1fr 0.72fr;
+        gap: 2rem;
+        align-items: end;
+      }
+
+      .hero-copy {
+        max-width: 780px;
+      }
+
+      .hero-copy .eyebrow {
+        margin-bottom: 1.25rem;
+      }
+
+      .hero-copy p {
+        max-width: 60ch;
+        margin: 1.5rem 0 2rem;
+        font-size: 1.06rem;
+        color: rgba(247, 242, 234, 0.86);
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+
+      .hero-side {
+        display: grid;
+        gap: 1rem;
+      }
+
+      .hero-card,
+      .hero-hours {
+        background: var(--glass);
+        border: 1px solid rgba(197, 160, 89, 0.14);
+        box-shadow: var(--shadow-lg);
+        backdrop-filter: blur(14px);
+        border-radius: var(--radius-xl);
+        padding: 1.4rem;
+      }
+
+      .hero-card .label,
+      .hero-hours .label {
+        color: var(--gold);
+        text-transform: uppercase;
+        letter-spacing: 0.18rem;
+        font-size: 0.72rem;
+        margin-bottom: 0.8rem;
+        display: block;
+      }
+
+      .hero-card h3,
+      .hero-hours h3 {
+        font-size: 1.35rem;
+        margin-bottom: 0.7rem;
+      }
+
+      .hero-card p,
+      .hero-hours p {
+        color: var(--muted);
+        font-size: 0.96rem;
+      }
+
+      .hero-hours ul {
+        list-style: none;
+        display: grid;
+        gap: 0.8rem;
+        margin-top: 1rem;
+      }
+
+      .hero-hours li {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        padding-bottom: 0.8rem;
+        border-bottom: 1px dashed rgba(197, 160, 89, 0.16);
+        color: var(--cream);
+      }
+
+      .hero-hours li:last-child {
+        padding-bottom: 0;
+        border-bottom: none;
+      }
+
+      .scroll-indicator {
+        position: absolute;
+        left: 50%;
+        bottom: 1.5rem;
+        transform: translateX(-50%);
+        z-index: 2;
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.55rem;
+        color: rgba(247, 242, 234, 0.66);
+        font-size: 0.78rem;
+        letter-spacing: 0.18rem;
+        text-transform: uppercase;
+      }
+
+      .scroll-indicator span:last-child {
+        width: 2px;
+        height: 38px;
+        background: linear-gradient(
+          180deg,
+          rgba(197, 160, 89, 0.15),
+          rgba(197, 160, 89, 0.95)
+        );
+        animation: pulseLine 1.8s infinite;
+      }
+
+      @keyframes pulseLine {
+        0%,
+        100% {
+          opacity: 0.4;
+          transform: scaleY(0.7);
+        }
+        50% {
+          opacity: 1;
+          transform: scaleY(1);
+        }
+      }
+
+      .stats-section {
+        padding: 0 0 1rem;
+        margin-top: -2rem;
+        position: relative;
+        z-index: 5;
+      }
+
+      .stats-bar {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+        padding: 1.1rem;
+        border-radius: 28px;
+        background: linear-gradient(
+          135deg,
+          rgba(25, 25, 25, 0.95),
+          rgba(9, 9, 9, 0.92)
+        );
+        border: 1px solid rgba(197, 160, 89, 0.18);
+        box-shadow: var(--shadow-xl);
+      }
+
+      .stat-card {
+        padding: 1.5rem 1.2rem;
+        border-radius: 20px;
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.02),
+          rgba(255, 255, 255, 0)
+        );
+        border: 1px solid rgba(197, 160, 89, 0.08);
+      }
+
+      .stat-card h3 {
+        font-size: clamp(1.8rem, 4vw, 2.5rem);
+        color: var(--gold-bright);
+        margin-bottom: 0.2rem;
+      }
+
+      .stat-card p {
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      .experience-grid {
+        display: grid;
+        grid-template-columns: 0.95fr 1.05fr;
+        gap: 1.5rem;
+      }
+
+      .experience-story,
+      .experience-panels {
+        min-height: 100%;
+      }
+
+      .experience-story {
+        padding: 2rem;
+        border-radius: var(--radius-xl);
+        border: 1px solid var(--line);
+        background:
+          linear-gradient(180deg, rgba(197, 160, 89, 0.08), transparent 25%),
+          rgba(255, 255, 255, 0.02);
+        box-shadow: var(--shadow-lg);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .experience-story::after {
+        content: "Peeyash";
+        position: absolute;
+        right: -0.6rem;
+        bottom: -1rem;
+        font-family: "Arvo", serif;
+        font-size: clamp(3rem, 7vw, 6rem);
+        color: rgba(197, 160, 89, 0.05);
+        pointer-events: none;
+      }
+
+      .story-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        margin-top: 2rem;
+      }
+
+      .story-mini {
+        padding: 1rem;
+        border-radius: 18px;
+        background: rgba(255, 255, 255, 0.025);
+        border: 1px solid rgba(197, 160, 89, 0.1);
+      }
+
+      .story-mini h4 {
+        font-size: 1rem;
+        margin-bottom: 0.45rem;
+      }
+
+      .story-mini p {
+        color: var(--muted);
+        font-size: 0.93rem;
+      }
+
+      .experience-panels {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+
+      .panel {
+        border-radius: var(--radius-xl);
+        overflow: hidden;
+        min-height: 280px;
+        position: relative;
+        box-shadow: var(--shadow-lg);
+        border: 1px solid rgba(197, 160, 89, 0.08);
+      }
+
+      .panel img {
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.7s ease;
+      }
+
+      .panel:hover img {
+        transform: scale(1.08);
+      }
+
+      .panel::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          180deg,
+          transparent 10%,
+          rgba(10, 10, 10, 0.72) 100%
+        );
+      }
+
+      .panel-content {
+        position: absolute;
+        left: 1.2rem;
+        right: 1.2rem;
+        bottom: 1.2rem;
+        z-index: 1;
+      }
+
+      .panel-content h4 {
+        font-size: 1.05rem;
+        margin-bottom: 0.35rem;
+      }
+
+      .panel-content p {
+        color: rgba(247, 242, 234, 0.8);
+        font-size: 0.9rem;
+      }
+
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+      }
+
+      .service-card {
+        position: relative;
+        min-height: 520px;
+        border-radius: var(--radius-xl);
+        overflow: hidden;
+        box-shadow: var(--shadow-lg);
+        border: 1px solid rgba(197, 160, 89, 0.14);
+        isolation: isolate;
+      }
+
+      .service-card img {
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.8s ease;
+      }
+
+      .service-card:hover img {
+        transform: scale(1.08);
+      }
+
+      .service-card::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          180deg,
+          rgba(12, 12, 12, 0.08) 0%,
+          rgba(12, 12, 12, 0.18) 22%,
+          rgba(12, 12, 12, 0.92) 100%
+        );
+        z-index: 1;
+      }
+
+      .service-card-content {
+        position: absolute;
+        inset: auto 0 0;
+        z-index: 2;
+        padding: 1.4rem;
+      }
+
+      .service-topline {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-bottom: 0.7rem;
+      }
+
+      .service-topline span {
+        color: var(--gold);
+        font-size: 0.76rem;
+        letter-spacing: 0.18rem;
+        text-transform: uppercase;
+      }
+
+      .service-card h3 {
+        font-size: 1.4rem;
+        margin-bottom: 0.75rem;
+      }
+
+      .service-card p {
+        color: rgba(247, 242, 234, 0.76);
+        font-size: 0.95rem;
+      }
+
+      .hover-panel {
+        margin-top: 1.15rem;
+        padding-top: 1rem;
+        border-top: 1px solid rgba(197, 160, 89, 0.18);
+        display: grid;
+        gap: 0.6rem;
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transform: translateY(18px);
+        transition: 0.45s ease;
+      }
+
+      .service-card:hover .hover-panel {
+        max-height: 220px;
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .hover-panel strong {
+        color: var(--gold-bright);
+        font-size: 1.08rem;
+      }
+
+      .hover-panel ul {
+        list-style: none;
+        display: grid;
+        gap: 0.45rem;
+        color: rgba(247, 242, 234, 0.78);
+        font-size: 0.9rem;
+      }
+
+      .testimonial-band {
+        margin-top: 1.25rem;
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 1rem;
+      }
+
+      .review-card,
+      .membership-card {
+        padding: 1.7rem;
+        border-radius: 24px;
+        background: rgba(255, 255, 255, 0.025);
+        border: 1px solid rgba(197, 160, 89, 0.12);
+        box-shadow: var(--shadow-lg);
+      }
+
+      .stars {
+        color: var(--gold-bright);
+        letter-spacing: 0.2rem;
+        margin-bottom: 0.8rem;
+      }
+
+      .review-card p,
+      .membership-card p {
+        color: var(--muted);
+      }
+
+      .membership-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.55rem;
+        padding: 0.5rem 0.9rem;
+        border-radius: 999px;
+        background: rgba(197, 160, 89, 0.12);
+        color: var(--gold-bright);
+        margin-bottom: 0.9rem;
+        font-size: 0.82rem;
+        text-transform: uppercase;
+        letter-spacing: 0.16rem;
+      }
+
+      .cta-banner {
+        padding: 2rem;
+        border-radius: 32px;
+        background:
+          linear-gradient(
+            135deg,
+            rgba(197, 160, 89, 0.14),
+            rgba(197, 160, 89, 0.03)
+          ),
+          rgba(255, 255, 255, 0.025);
+        border: 1px solid rgba(197, 160, 89, 0.18);
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 1rem;
+        align-items: center;
+        box-shadow: var(--shadow-xl);
+      }
+
+      .cta-banner h3 {
+        font-size: clamp(1.7rem, 3vw, 2.5rem);
+        margin-bottom: 0.55rem;
+      }
+
+      .cta-banner p {
+        color: var(--muted);
+        max-width: 60ch;
+      }
+
+      .footer {
+        border-top: 1px solid rgba(197, 160, 89, 0.12);
+        padding: 2rem 0 3rem;
+      }
+
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr 0.8fr;
+        gap: 1.5rem;
+      }
+
+      .footer h4 {
+        margin-bottom: 0.9rem;
+        font-size: 1rem;
+      }
+
+      .footer p,
+      .footer li,
+      .footer a {
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      .footer ul {
+        list-style: none;
+        display: grid;
+        gap: 0.55rem;
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(38px);
+        transition:
+          opacity 0.8s ease,
+          transform 0.8s ease;
+      }
+
+      .reveal.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      @media (max-width: 1180px) {
+        .hero-grid,
+        .section-header,
+        .experience-grid,
+        .testimonial-band,
+        .cta-banner,
+        .footer-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .services-grid,
+        .stats-bar,
+        .experience-panels {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 920px) {
+        body::before,
+        .social-rail {
+          display: none;
+        }
+
+        .nav-links,
+        .nav-actions {
+          display: none;
+        }
+
+        .mobile-toggle {
+          display: inline-flex;
+        }
+
+        .nav-shell.active {
+          border-radius: 30px;
+          align-items: flex-start;
+          flex-wrap: wrap;
+        }
+
+        .nav-shell.active .nav-links,
+        .nav-shell.active .nav-actions {
+          display: flex;
+          width: 100%;
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .nav-shell.active .nav-links {
+          padding-top: 1rem;
+          gap: 1rem;
+        }
+
+        .nav-shell.active .nav-actions {
+          padding-top: 1rem;
+        }
+
+        .stats-bar,
+        .services-grid,
+        .experience-panels,
+        .story-grid,
+        .section-intro-card .intro-metrics {
+          grid-template-columns: 1fr;
+        }
+
+        .hero {
+          min-height: auto;
+          padding-bottom: 6rem;
+        }
+
+        .whatsapp-float {
+          right: 0.9rem;
+          bottom: 1rem;
+          padding: 0.85rem 1rem;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .section {
+          padding: 5rem 0;
+        }
+
+        .nav-shell {
+          padding: 0.9rem 1rem;
+        }
+
+        .brand-title {
+          font-size: 0.93rem;
+        }
+
+        .hero-copy p,
+        .section-header p,
+        .lead {
+          font-size: 0.98rem;
+        }
+
+        .hero-card,
+        .hero-hours,
+        .experience-story,
+        .review-card,
+        .membership-card,
+        .cta-banner {
+          padding: 1.25rem;
+        }
+
+        .service-card {
+          min-height: 470px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header" id="siteHeader">
+      <div class="nav-shell" id="navShell">
+        <a
+          href="#home"
+          class="brand"
+          aria-label="The Peeyash Babering Salon home"
+        >
+          <div class="brand-mark">HG</div>
+          <div class="brand-text">
+            <span class="brand-title">The Peeyash Babering Salon</span>
+            <span class="brand-subtitle">Vintage Modern Barbering</span>
+          </div>
+        </a>
+
+        <nav aria-label="Primary navigation">
+          <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#visit">Visit</a></li>
+          </ul>
+        </nav>
+
+        <div class="nav-actions">
+          <a class="btn-ghost" href="tel:+12125550127">Call Salon</a>
+          <a class="btn" href="#visit">Book an Appointment</a>
+        </div>
+
+        <button
+          class="mobile-toggle"
+          id="mobileToggle"
+          aria-label="Toggle menu"
+        >
+          ☰
+        </button>
+      </div>
+    </header>
+
+    <div class="social-rail" aria-label="Social links">
+      <a href="#" aria-label="Instagram">IG</a>
+      <a href="#" aria-label="TikTok">TT</a>
+      <a href="#" aria-label="Facebook">FB</a>
+    </div>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-video-wrap">
+          <video
+            autoplay
+            muted
+            loop
+            playsinline
+            poster="https://images.unsplash.com/photo-1517832606299-7ae9b720a186?auto=format&fit=crop&w=1600&q=80"
+          >
+            <source
+              src="https://cdn.coverr.co/videos/coverr-barber-shaping-a-beard-1565794147493?download=1080p"
+              type="video/mp4"
+            />
+          </video>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-noise"></div>
+
+        <div class="container hero-grid">
+          <div class="hero-copy reveal">
+            <div class="eyebrow">Established for Gentlemen of Taste</div>
+            <h1>Precision Grooming with Peeyash, Ritual, and Presence.</h1>
+            <p>
+              Step into a barbering house where old-world detail meets modern
+              refinement. From skin fades to hot towel finishes, every
+              appointment at The Peeyash Babering Salon is designed to feel
+              ceremonial, tailored, and unmistakably premium.
+            </p>
+            <div class="hero-actions">
+              <a href="#visit" class="btn">Reserve Your Chair</a>
+              <a href="#services" class="btn-ghost"
+                >Explore Signature Services</a
+              >
+            </div>
+          </div>
+
+          <div class="hero-side reveal">
+            <article class="hero-card">
+              <span class="label">Today’s Signature Experience</span>
+              <h3>The Executive Ritual</h3>
+              <p>
+                Precision cut, steamed hot towel shave, beard detailing, scalp
+                tonic finish, and a complimentary espresso or aged
+                whisky-inspired mocktail while you unwind.
+              </p>
+            </article>
+
+            <aside class="hero-hours">
+              <span class="label">Salon Hours</span>
+              <h3>Refined Service, All Week</h3>
+              <p>
+                Private bookings and after-hours grooming available for members.
+              </p>
+              <ul>
+                <li>
+                  <span>Mon – Thu</span><strong>9:00 AM – 8:00 PM</strong>
+                </li>
+                <li><span>Friday</span><strong>9:00 AM – 9:00 PM</strong></li>
+                <li><span>Saturday</span><strong>8:00 AM – 9:00 PM</strong></li>
+                <li><span>Sunday</span><strong>10:00 AM – 5:00 PM</strong></li>
+              </ul>
+            </aside>
+          </div>
+        </div>
+
+        <div class="scroll-indicator" aria-hidden="true">
+          <span>Scroll</span>
+          <span></span>
+        </div>
+      </section>
+
+      <section class="stats-section reveal">
+        <div class="container">
+          <div class="stats-bar">
+            <article class="stat-card">
+              <h3>10k+</h3>
+              <p>
+                Precision Cuts Delivered with consistency, discretion, and
+                premium finish.
+              </p>
+            </article>
+            <article class="stat-card">
+              <h3>15</h3>
+              <p>
+                Master Barbers trained in fades, classic tailoring, beard
+                architecture, and razor work.
+              </p>
+            </article>
+            <article class="stat-card">
+              <h3>5.0</h3>
+              <p>
+                Star client satisfaction from discerning professionals and
+                style-conscious regulars.
+              </p>
+            </article>
+            <article class="stat-card">
+              <h3>Drinks</h3>
+              <p>
+                Complimentary espresso, sparkling water, and house refreshments
+                with every booking.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="experience">
+        <div class="container">
+          <div class="section-header reveal">
+            <div>
+              <div class="eyebrow">The Atmosphere</div>
+              <h2>
+                A room built for craft, conversation, and calm confidence.
+              </h2>
+            </div>
+            <aside class="section-intro-card">
+              <p>
+                Our salon is layered with dark timber tones, brass accents,
+                vintage-inspired detailing, and a slow luxury rhythm. Every
+                touchpoint—from the welcome pour to the final neckline
+                cleanup—is choreographed to feel elevated and complete.
+              </p>
+              <div class="intro-metrics">
+                <div>
+                  <strong>45 min</strong>
+                  <span>Average signature session</span>
+                </div>
+                <div>
+                  <strong>7 days</strong>
+                  <span>Open weekly for bookings</span>
+                </div>
+                <div>
+                  <strong>Espresso</strong>
+                  <span>Complimentary house refreshment</span>
+                </div>
+                <div>
+                  <strong>Private</strong>
+                  <span>After-hours member access</span>
+                </div>
+              </div>
+              <div class="intro-note">
+                <strong>What sets us apart:</strong> each service is shaped
+                around precision, presence, comfort, and a finish that still
+                looks intentional days after your appointment.
+              </div>
+            </aside>
+          </div>
+
+          <div class="experience-grid">
+            <article class="experience-story reveal">
+              <h3 style="font-size: 1.8rem; margin-bottom: 1rem">
+                Where timeless ritual meets modern grooming culture.
+              </h3>
+              <p class="lead">
+                We built The Peeyash Babering Salon for men who value details:
+                the balance of a perfect taper, the discipline of a sculpted
+                beard line, the comfort of a razor finished with heated towels
+                and botanical tonics.
+              </p>
+              <div class="story-grid">
+                <div class="story-mini">
+                  <h4>Premium Products</h4>
+                  <p>
+                    Small-batch pomades, beard elixirs, scalp tonics, and
+                    post-shave recovery formulas.
+                  </p>
+                </div>
+                <div class="story-mini">
+                  <h4>Member Experience</h4>
+                  <p>
+                    Priority scheduling, after-hours access, and concierge
+                    reminders for recurring guests.
+                  </p>
+                </div>
+                <div class="story-mini">
+                  <h4>Private Consults</h4>
+                  <p>
+                    Style mapping for weddings, campaigns, executive portraits,
+                    and image refreshes.
+                  </p>
+                </div>
+                <div class="story-mini">
+                  <h4>Precision Finish</h4>
+                  <p>
+                    Exacting edge work, razor detailing, and skin preparation
+                    that lasts beyond the appointment.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <div class="experience-panels reveal">
+              <article class="panel">
+                <img
+                  src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=900&q=80"
+                  alt="Luxury barber chair and interior"
+                />
+                <div class="panel-content">
+                  <h4>Tailored Interiors</h4>
+                  <p>
+                    Dark wood, brass detailing, leather seating, and an
+                    atmosphere of quiet distinction.
+                  </p>
+                </div>
+              </article>
+
+              <article class="panel">
+                <img
+                  src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=900&q=80"
+                  alt="Barber crafting a precise haircut"
+                />
+                <div class="panel-content">
+                  <h4>Technique First</h4>
+                  <p>
+                    Every appointment is structured around proportion, face
+                    shape, texture, and finish.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="services">
+        <div class="container">
+          <div class="section-header reveal">
+            <div>
+              <div class="eyebrow">Featured Services</div>
+              <h2>
+                Luxury grooming packages designed to look sharp from every
+                angle.
+              </h2>
+            </div>
+            <aside class="section-intro-card">
+              <p>
+                The menu at Peeyash is built around precision, longevity, and
+                presentation. Hover over each service to reveal detailed
+                pricing, enhancements, and what sets the ritual apart.
+              </p>
+              <div class="intro-metrics">
+                <div>
+                  <strong>3 Core</strong>
+                  <span>Signature luxury rituals</span>
+                </div>
+                <div>
+                  <strong>Tailored</strong>
+                  <span>Finish based on hair texture</span>
+                </div>
+                <div>
+                  <strong>Premium</strong>
+                  <span>Products used at every stage</span>
+                </div>
+                <div>
+                  <strong>Sharp</strong>
+                  <span>Results built to last</span>
+                </div>
+              </div>
+              <div class="intro-note">
+                <strong>Service philosophy:</strong> no rushed cuts, no generic
+                shaping, no dead time—just layered grooming experiences that
+                feel substantial from start to finish.
+              </div>
+            </aside>
+          </div>
+
+          <div class="services-grid">
+            <article class="service-card reveal">
+              <img
+                src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=1000&q=80"
+                alt="Luxury haircut service"
+              />
+              <div class="service-card-content">
+                <div class="service-topline">
+                  <span>Signature Cut</span>
+                  <span>45 min</span>
+                </div>
+                <h3>The Tailored Fade</h3>
+                <p>
+                  Sharp gradients, detailed blending, neckline refinement, and
+                  finishing product selected to suit your hair texture and
+                  lifestyle.
+                </p>
+                <div class="hover-panel">
+                  <strong>$45</strong>
+                  <ul>
+                    <li>Consultation and head-shape assessment</li>
+                    <li>Precision clipper and shear detailing</li>
+                    <li>Hot towel neck finish</li>
+                    <li>Styling product application and care tips</li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+
+            <article class="service-card reveal">
+              <img
+                src="images/ta-focando-1VTQaaI0HP8-unsplash.jpg"
+                alt="Premium shave service"
+              />
+              <div class="service-card-content">
+                <div class="service-topline">
+                  <span>Razor Ritual</span>
+                  <span>40 min</span>
+                </div>
+                <h3>Hot Towel Shave</h3>
+                <p>
+                  A classic wet shave experience with skin prep, rich lather,
+                  steaming towels, and a soothing post-shave recovery routine.
+                </p>
+                <div class="hover-panel">
+                  <strong>$38</strong>
+                  <ul>
+                    <li>Pre-shave oil and facial steam towel</li>
+                    <li>Traditional lather with straight razor detailing</li>
+                    <li>Cooling compress and aftercare balm</li>
+                    <li>Relaxed shoulder wrap finish</li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+
+            <article class="service-card reveal">
+              <img
+                src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=1000&q=80"
+                alt="Beard styling service"
+              />
+              <div class="service-card-content">
+                <div class="service-topline">
+                  <span>Beard Architecture</span>
+                  <span>35 min</span>
+                </div>
+                <h3>Beard Sculpt & Detail</h3>
+                <p>
+                  For men who want shape, density control, cheek precision, and
+                  a softer healthier beard with a clean jawline finish.
+                </p>
+                <div class="hover-panel">
+                  <strong>$30</strong>
+                  <ul>
+                    <li>Length balancing and contour strategy</li>
+                    <li>Cheek line and neck line precision</li>
+                    <li>Conditioning beard steam wrap</li>
+                    <li>Oil, balm, and brush finish</li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="testimonial-band" id="reviews">
+            <article class="review-card reveal">
+              <div class="stars">★★★★★</div>
+              <h3 style="font-size: 1.5rem; margin-bottom: 0.7rem">
+                “This feels less like a haircut and more like a standard of
+                living.”
+              </h3>
+              <p>
+                The atmosphere is incredible, the fade work is exact, and the
+                team knows how to make a regular appointment feel like a premium
+                ritual. I leave looking sharper every single time.
+              </p>
+              <p
+                style="margin-top: 1rem; color: var(--cream); font-weight: 700"
+              >
+                — Michael R., Creative Director
+              </p>
+            </article>
+
+            <article class="membership-card reveal">
+              <div class="membership-pill">Private Club Access</div>
+              <h3 style="font-size: 1.4rem; margin-bottom: 0.7rem">
+                Join the Peeyash Membership
+              </h3>
+              <p>
+                Lock in priority slots, receive curated grooming product drops,
+                and access discreet after-hours appointments built for
+                executives, grooms, and modern gentlemen with standards.
+              </p>
+              <div style="margin-top: 1.2rem">
+                <a href="#visit" class="btn">Enquire About Membership</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="visit">
+        <div class="container">
+          <div class="cta-banner reveal">
+            <div>
+              <div class="eyebrow">Reserve the Experience</div>
+              <h3>
+                Book your next appointment at a barbering house built to
+                impress.
+              </h3>
+              <p>
+                214 Mercer Avenue, New York, NY · Walk-ins accepted based on
+                availability · Private grooming sessions by request.
+              </p>
+            </div>
+            <div style="display: flex; gap: 0.8rem; flex-wrap: wrap">
+              <a href="tel:+12125550127" class="btn-ghost">Call Now</a>
+              <a href="mailto:bookings@peeyashsalon.com" class="btn"
+                >Email Concierge</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <a
+      class="whatsapp-float"
+      href="https://wa.me/12125550127?text=Hello%20The%20Peeyash%20Babering%20Salon%2C%20I%20want%20to%20book%20an%20appointment."
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Chat on WhatsApp"
+    >
+      <span class="whatsapp-icon">✆</span>
+      <span>Book via WhatsApp</span>
+    </a>
+
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div>
+          <h4>The Peeyash Babering Salon</h4>
+          <p>
+            Precision barbering, hot towel rituals, and modern gentleman’s
+            grooming in a richly layered vintage-modern setting.
+          </p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#visit">Booking</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:+12125550127">+1 (212) 555-0127</a></li>
+            <li>
+              <a href="mailto:bookings@peeyashsalon.com"
+                >bookings@peeyashsalon.com</a
+              >
+            </li>
+            <li>214 Mercer Avenue, New York, NY</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const header = document.getElementById("siteHeader");
+      const mobileToggle = document.getElementById("mobileToggle");
+      const navShell = document.getElementById("navShell");
+
+      window.addEventListener("scroll", () => {
+        header.classList.toggle("scrolled", window.scrollY > 24);
+      });
+
+      mobileToggle.addEventListener("click", () => {
+        navShell.classList.toggle("active");
+        mobileToggle.textContent = navShell.classList.contains("active")
+          ? "✕"
+          : "☰";
+      });
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+            }
+          });
+        },
+        { threshold: 0.15 },
+      );
+
+      document
+        .querySelectorAll(".reveal")
+        .forEach((item) => observer.observe(item));
+
+      document.querySelectorAll('a[href^="#"]').forEach((link) => {
+        link.addEventListener("click", (event) => {
+          const targetId = link.getAttribute("href");
+          if (!targetId || targetId === "#") return;
+
+          const target = document.querySelector(targetId);
+          if (target) {
+            event.preventDefault();
+            target.scrollIntoView({ behavior: "smooth", block: "start" });
+            navShell.classList.remove("active");
+            mobileToggle.textContent = "☰";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
